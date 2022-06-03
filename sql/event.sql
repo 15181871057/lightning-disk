@@ -1,0 +1,1 @@
+CREATE EVENT IF NOT EXISTS deleteOutDate  ON SCHEDULE EVERY 300 second DO DELETE FROM upload WHERE unix_timestamp(sysdate())-time >= 6*60*60;
